@@ -1,3 +1,14 @@
+:root{
+  --background:black;
+  --text-color:white;
+  --blue-tl: rgb(0, 0, 176);
+  --blue-tr: rgb(0, 0, 128);
+  --blue-bl: rgb(0, 0, 80);
+  --blue-br: rgb(0, 0, 32);
+
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +16,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--text-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{
+
+}
+
+.box{
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(to top left ,var(--blue-br), var(--blue-tl)), linear-gradient(to top right, var(--blue-bl),var(--blue-tr));
+  border-radius: 5px;
+  box-shadow: 
+  0 0 4px 3px black,
+  0 0 0px 5px white,
+  0 0 1px 6px white;
+  margin: 6px;
+  padding: 15px;
+}
+
+
