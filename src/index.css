@@ -1,13 +1,15 @@
 :root{
-  --background:black;
+  --background:rgb(10, 10, 10);
   --text-color:white;
-  --blue-tl: rgb(0, 0, 176);
+  --blue-tl: rgb(0, 0, 190);
   --blue-tr: rgb(0, 0, 128);
   --blue-bl: rgb(0, 0, 80);
   --blue-br: rgb(0, 0, 32);
 
 }
-
+h1, h2, h3, h4, h5, h6{
+  margin:5px;
+}
 
 body {
   margin: 0;
@@ -26,20 +28,105 @@ code {
 }
 
 .App{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1100px) {
+  .main{
+    width: 80%;
+  }
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+}
+
+.content-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding-right: 12px;
+}
+
+.content-menu{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu{
+  height: auto;
+  right: 20px;
+  top:30px;
+  z-index: 2;
+  position: relative;
+  width: 230px;
+  box-shadow: 0 0 10px 10px black;
+}
+
+.menu-ordered{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+  .main{
+    width: 100%;
+    
+  }
+  .menu{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .main{
+    margin-left: 20px;
+  }
 
 }
 
+
 .box{
-  width: 400px;
-  height: 300px;
   background: linear-gradient(to top left ,var(--blue-br), var(--blue-tl)), linear-gradient(to top right, var(--blue-bl),var(--blue-tr));
   border-radius: 5px;
   box-shadow: 
-  0 0 4px 3px black,
+  0 0 3px 2px black,
   0 0 0px 5px white,
-  0 0 1px 6px white;
+  0 0 1px 6px white,
+  0 0 2px 8px black,
+  0 0 10px 10px rgb(29, 29, 29);
   margin: 6px;
-  padding: 15px;
+  margin-bottom: 14px;
 }
 
+.content{
+  width: 100%;
+  height: 400px;
+}
+
+.content-inside{
+  margin: 10px;
+  text-align: center;
+}
 
