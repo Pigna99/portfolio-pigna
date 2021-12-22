@@ -30,16 +30,25 @@ const AppProvider = ({children})=>{
             }
         }
         setMenuOpen(!isMenuOpen);
+
     }
 
 
     function changeCursor(id){
-        var offsets = document.getElementById(id).getBoundingClientRect();
-        //console.log(offsets);
-        setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
-        if(window.innerWidth<=750){
-            toggleMenu(null,id);
-        } 
+        if(window.innerWidth<=750 && !isMenuOpen){
+            var offsets = document.getElementById("title-materia").getBoundingClientRect();
+            setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
+        
+        
+        }else if(window.innerWidth<=750){
+            toggleMenu(false,id);
+        }else{
+            var offsets = document.getElementById(id).getBoundingClientRect();
+            //console.log(offsets);
+            setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
+        }
+        
+        
     }
 
     //sposta il cursore nella posizione corretta se avviene un resize
