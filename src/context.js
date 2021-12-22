@@ -5,6 +5,9 @@ const AppContext = React.createContext();
 
 
 
+
+
+
 const AppProvider = ({children})=>{
     let cursorInitState = {right:500, top:100, active:false, componentId:"none"}
     const [cursorPosition, setCursorPosition] = useState(cursorInitState);
