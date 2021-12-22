@@ -1,4 +1,5 @@
-import {Content, Title, Menu, Time} from "./components/index";
+import {Content, Title, Menu, Time, Cursor} from "./components/index";
+
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
           <Menu/>
           <Time/>
         </div>
-        
       </div> 
+      <Cursor/>
     </div>
   );
 }
