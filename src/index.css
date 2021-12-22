@@ -66,6 +66,8 @@ code {
   justify-content: center;
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .main{
@@ -158,12 +160,8 @@ code {
 }
 
 @media only screen and (max-width: 750px) {
-  .content-menu{
-    display: none;
-  }
   .main{
     width: 100%;
-    
   }
 }
 
@@ -231,7 +229,7 @@ code {
   .content-menu{
     opacity: 1;
     display: flex!important;
-    position: absolute!important;
+    position: absolute;
     height: auto;
     transition: all 0.3s;
     right: 10px;
@@ -245,10 +243,26 @@ code {
   .close-menu{
     transform: translate(300px);
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 
   .title{
     z-index: 4;
   }
+}
+
+.blur{
+  position: absolute;
+  visibility: hidden;
+  top:80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  transition: all 0.3s;
+}
+
+.visible-blur{
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
 }

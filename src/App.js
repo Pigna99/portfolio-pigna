@@ -4,9 +4,10 @@ import { useGlobalContext } from './context';
 
 
 function App() {
-  const {isMenuOpen} = useGlobalContext();
+  const {isMenuOpen, toggleMenu} = useGlobalContext();
   return (
-    <div className="App">
+    <div className="App" >
+      <div className={"blur"+ (!isMenuOpen ? "": " visible-blur")} onClick={(e)=>{e.preventDefault();toggleMenu()}}/>
       <div className="main">        
         <div className="content-main">
           <Title/>
