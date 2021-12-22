@@ -6,7 +6,7 @@ function Title() {
     return (
         <div className='box title'>
             <header className='title'>
-                <h1>Title</h1>
+                <h2>Andrea Pignotti</h2>
                 <div className={'menu-materia-test' + (isMenuOpen? " grey" : "")} onClick={toggleMenu} id="title-materia"></div>
             </header>  
         </div>
