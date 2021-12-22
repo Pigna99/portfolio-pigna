@@ -264,7 +264,6 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  
   transition: all 0.3s;
 }
 
@@ -312,6 +311,7 @@ code {
 
 .pg-column{
   display: flex;
+  height: 100px;
 }
 
 .pg-set{
@@ -372,8 +372,8 @@ code {
     font-size: medium;
   }
 
-  .pg-img{
-
+  .pg-column{
+    height: 80px;
   }
 
   .hp, .mp{
@@ -400,8 +400,8 @@ code {
     padding:0;
   }
 
-  .pg-img{
-
+  .pg-column{
+    height: 60px;
   }
 
   .hp, .mp{
