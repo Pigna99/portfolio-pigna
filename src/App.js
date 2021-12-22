@@ -1,8 +1,10 @@
 import {Content, Title, Menu, Time, Cursor} from "./components/index";
+import { useGlobalContext } from './context';
 
 
 
 function App() {
+  const {isMenuOpen} = useGlobalContext();
   return (
     <div className="App">
       <div className="main">        
@@ -10,7 +12,7 @@ function App() {
           <Title/>
           <Content/>
         </div>
-        <div className="content-menu">
+        <div className={"content-menu" + (!isMenuOpen ? " close-menu" : "")}>
           <Menu/>
           <Time/>
         </div>

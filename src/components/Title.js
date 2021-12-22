@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {useGlobalContext} from '../context';
 
 function Title() {
+    const {toggleMenu, isMenuOpen} = useGlobalContext();
     return (
         <div className='box title'>
             <header className='title'>
                 <h1>Title</h1>
+                <div className={'menu-materia-test' + (isMenuOpen? " grey" : "")} onClick={toggleMenu} id="title-materia"></div>
             </header>  
         </div>
     )
