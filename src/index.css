@@ -22,7 +22,7 @@
 
 .pointer{
   position: relative;
-  content: url('/photos/pointer2.png');
+  content: url('/photos/pointer3.png');
   transform: scale(0.25);
   animation-name: cursor;
   animation-duration: 1s;

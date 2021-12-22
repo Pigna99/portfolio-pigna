@@ -10,7 +10,7 @@ const AppProvider = ({children})=>{
 
     function changeCursor(id){
         var offsets = document.getElementById(id+"").getBoundingClientRect();
-        console.log(offsets);
+        //console.log(offsets);
         setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
     }
 
