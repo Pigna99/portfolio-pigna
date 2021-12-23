@@ -374,7 +374,6 @@ code {
   0 0 2px 6px black,
   0 0 8px 8px rgb(29, 29, 29);
   margin-left: 20px;
-
 }
 
 .level-inside{
@@ -435,6 +434,12 @@ code {
 
   .level{
     margin-left: 10px;
+  }
+  .level-specil{
+    width: 120px!important;
+  }
+  .spacing{
+    font-size: 16px;
   }
 }
 
@@ -514,4 +519,27 @@ code {
   margin: 10px;
   padding-top: 10px;
   align-content: top;
+}
+
+.line{
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  padding:5px;
+  flex-wrap: wrap;
+}
+
+.spacing{
+  margin-top:18px;
+  margin-left: 10px;
+  text-align: right;
+  height:20px;
+}
+
+.level-specil{
+  height: 10px;
+  margin-top:22px;
+  margin-bottom: 28px;
+  margin-right: 10px;
+  width: 300px;
 }

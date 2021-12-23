@@ -54,18 +54,37 @@ function Skills(){//da generare con un array sarebbe meglio!
     return (
         <div className='info-skills'>
             <nav className='box skills-menu'>
-                <InfoMenuSkill id="skill1" text="skill1" functiontoggle={changeInfo}/>
+                <InfoMenuSkill id="programming" text="Programming" functiontoggle={changeInfo}/>
                 <InfoMenuSkill id="skill2" text="skill2" functiontoggle={changeInfo}/>
                 <InfoMenuSkill id="skill3" text="skill3" functiontoggle={changeInfo}/>
             </nav>
             <section className='skills-text'>
             {
                     info == 'none' ? <p>none</p>
-                    : info== 'skill1' ? <p>skill1 text</p>
+                    : info== 'programming' ? <ProgrammingLang/>
                     : info== 'skill2' ? <p>skill2 text</p>
                     : info== 'skill3' ? <p>skill3 text</p>
                     : <p>error</p>
                 }
+            </section>
+        </div>
+    )
+}
+
+function ProgrammingLang(){
+    return(
+        <div className='line'>
+            <section>
+                <div className='spacing'>Javascript</div>
+                <div className='spacing'>Python</div>
+                <div className='spacing'>C++</div>
+                <div className='spacing'>Php</div>
+            </section>
+            <section>
+                <div className='level spacing level-specil'></div>
+                <div className='level spacing level-specil'></div>
+                <div className='level spacing level-specil'></div>
+                <div className='level spacing level-specil'></div>
             </section>
         </div>
     )
