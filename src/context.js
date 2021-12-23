@@ -18,7 +18,7 @@ const AppProvider = ({children})=>{
         //console.log(!isMenuOpen);
         if(isMenuOpen){//se stiamo chiudendo il menu
             var offsets = document.getElementById("title-materia").getBoundingClientRect();
-            setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId: id || cursorPosition.componentId});
+            setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY-10, active:true, componentId: id || cursorPosition.componentId});
         }else{//se stiamo aprendo il menu
             if(cursorPosition.componentId!="none"){
                 //console.log(cursorPosition.componentId);
@@ -38,11 +38,11 @@ const AppProvider = ({children})=>{
         if(window.innerWidth<=750 && !isMenuOpen){
             if(id== cursorPosition.componentId){
                 var offsets = document.getElementById("title-materia").getBoundingClientRect();
-                setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId:id});
+                setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY-10, active:true, componentId:id});
             }else{
                 setTimeout(()=>{
                     var offsets = document.getElementById(id).getBoundingClientRect();
-                    setCursorPosition({...cursorPosition, right:offsets.x, top:offsets.y+window.scrollY, active:true});
+                    setCursorPosition({...cursorPosition, right:offsets.x, top:offsets.y+window.scrollY-10, active:true});
                 },1);
                 
             }

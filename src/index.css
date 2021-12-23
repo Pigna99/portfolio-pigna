@@ -143,6 +143,10 @@ code {
   -webkit-tap-highlight-color: transparent;
 }
 
+.menu-link:hover{
+  color:yellow
+}
+
 
 /*old cursor thing*/
 /*.menu-link::before{
@@ -169,6 +173,9 @@ code {
   .title{
     display: flex;
     justify-content: left;
+  }
+  .pointer{
+    transform: scale(0.2);
   }
 }
 

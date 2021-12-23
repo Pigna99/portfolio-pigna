@@ -13,9 +13,9 @@ function Menu() {
             }
         })
         if(window.innerWidth<=750){
-            setTimeout(()=>{var offsets = document.getElementById("title-materia").getBoundingClientRect();setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId: menu});},100)
+            setTimeout(()=>{var offsets = document.getElementById("title-materia").getBoundingClientRect();setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY-10, active:true, componentId: menu});},100)
         }else{
-            setTimeout(()=>{var offsets = document.getElementById(menu).getBoundingClientRect();setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId: menu});},100)
+            setTimeout(()=>{var offsets = document.getElementById(menu).getBoundingClientRect();setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId: menu});},100)
         }
     },[]);
     return (
