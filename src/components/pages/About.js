@@ -80,8 +80,10 @@ function InfoMenuSkill({text, id, functiontoggle}){
 function Infobox(){
     return(
         <div className='info-text'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium magna leo, at egestas elit eleifend et. Phasellus sed dapibus risus. Sed sed rhoncus ligula. Sed finibus imperdiet pretium. Maecenas felis tortor, cursus in dictum eget, consequat at odio. Donec purus ligula, porttitor sed mi quis, fringilla ultricies tortor. Vestibulum a ultricies justo. Maecenas ipsum nulla, ullamcorper et vestibulum malesuada, accumsan at mi. Nulla facilisi. Aenean nec lorem consectetur, bibendum lectus vitae, egestas eros.
-Morbi sit amet malesuada orci. Nam luctus aliquam tellus. Maecenas ut justo fringilla, accumsan massa nec, porttitor erat. Nam ligula dolor, mattis vitae aliquet auctor, maximus sed sem. Praesent ligula mi, dignissim ac quam eget, tristique luctus tellus. In at tortor ultricies, ultricies massa at, consectetur tellus. In mollis sodales lectus, in faucibus purus viverra vestibulum. Curabitur mollis eu urna nec molestie. Sed interdum, purus vitae vestibulum tempus, sem orci laoreet nisi, et pharetra lacus mauris et ligula. Vestibulum rutrum blandit mi, eu sollicitudin arcu condimentum quis. Ut eu ante efficitur tortor porttitor tincidunt. Phasellus imperdiet quam ut suscipit suscipit. Cras pretium iaculis neque, id placerat nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <div className='superinfo'><h3>Contacts</h3><br/><span alt="number">+39 331-134-9125</span><br/><span alt="email" style={{fontSize:"15px"}}>andrea.pignotti@studenti.unitn.it</span></div>
+            <p>
+                Born in 1999, in love with videogames, sport and music since childhood. After High School he started to develop the idea of becoming a programmer. Actually he study Computer Science at the University of Trento (Italy). He enjoys do small programming projects and is always looking for new motivations and ideas.
+            </p>
         </div>
     )
 }

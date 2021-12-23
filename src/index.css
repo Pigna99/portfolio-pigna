@@ -262,6 +262,14 @@ code {
   .title{
     z-index: 4;
   }
+  .info-text{
+    flex-direction:column-reverse;
+    padding-top: 10px;
+    justify-content: start!important;
+  }
+  .info-text>p{
+    width: 95%!important;
+  }
 }
 
 .blur{
@@ -456,13 +464,14 @@ code {
   margin: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 70%;
+  max-width: 500px;
 }
 
 .info-text{
   min-height: 400px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -487,4 +496,13 @@ code {
   margin-left: 40px;
   margin-right: 0px;
   cursor: pointer;
+}
+
+.superinfo{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 10px;
+  padding-top: 10px;
+  align-content: top;
 }
