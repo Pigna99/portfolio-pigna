@@ -18,13 +18,13 @@ const AppProvider = ({children})=>{
         //console.log(!isMenuOpen);
         if(isMenuOpen){//se stiamo chiudendo il menu
             var offsets = document.getElementById("title-materia").getBoundingClientRect();
-            setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId: id || cursorPosition.componentId});
+            setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId: id || cursorPosition.componentId});
         }else{//se stiamo aprendo il menu
             if(cursorPosition.componentId!="none"){
                 //console.log(cursorPosition.componentId);
                 setTimeout(()=>{
                     var offsets = document.getElementById(cursorPosition.componentId).getBoundingClientRect();
-                    setCursorPosition({right:offsets.x-300, top:offsets.y, active:true, componentId: id || cursorPosition.componentId});
+                    setCursorPosition({right:offsets.x-300, top:offsets.y+window.scrollY, active:true, componentId: id || cursorPosition.componentId});
                 },0);
                 
             }
@@ -36,16 +36,23 @@ const AppProvider = ({children})=>{
 
     function changeCursor(id){
         if(window.innerWidth<=750 && !isMenuOpen){
-            var offsets = document.getElementById("title-materia").getBoundingClientRect();
-            setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
-        
-        
+            if(id== cursorPosition.componentId){
+                var offsets = document.getElementById("title-materia").getBoundingClientRect();
+                setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId:id});
+            }else{
+                setTimeout(()=>{
+                    var offsets = document.getElementById(id).getBoundingClientRect();
+                    setCursorPosition({...cursorPosition, right:offsets.x, top:offsets.y+window.scrollY, active:true});
+                },1);
+                
+            }
+            
         }else if(window.innerWidth<=750){
             toggleMenu(false,id);
         }else{
             var offsets = document.getElementById(id).getBoundingClientRect();
             //console.log(offsets);
-            setCursorPosition({right:offsets.x, top:offsets.y, active:true, componentId:id});
+            setCursorPosition({right:offsets.x, top:offsets.y+window.scrollY, active:true, componentId:id});
         }
         
         
