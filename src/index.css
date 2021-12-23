@@ -270,6 +270,10 @@ code {
   .info-text>p{
     width: 95%!important;
   }
+
+  .content-box-test{
+    min-height: 400px!important;
+  }
 }
 
 .blur{
@@ -443,7 +447,12 @@ code {
 
 .content-box{
   height: auto;
-  min-height: 400px;
+  min-height: 250px;
+}
+
+.content-box-test{
+  height: auto;
+  min-height: 300px;
 }
 
 .clickable{
@@ -453,7 +462,7 @@ code {
 
 .info-box{
   display: flex;
-  height: 300px;
+  height: 250px;
   margin: 10px;
   flex-direction: column;
   justify-content: center;
@@ -469,7 +478,7 @@ code {
 }
 
 .info-text{
-  min-height: 400px;
+  min-height: 250px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -477,7 +486,7 @@ code {
 
 .info-skills{
   display: flex;
-  min-height: 400px;
+  min-height: 250px;
 }
 
 .skills-menu{

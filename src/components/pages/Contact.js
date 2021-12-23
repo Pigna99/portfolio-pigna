@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
     return (
-        <div className='content-box'>
+        <div className='content-box-test'>
             Contact
         </div>
     )
