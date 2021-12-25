@@ -78,13 +78,34 @@ function ProgrammingLang(){
                 <div className='spacing'>Python</div>
                 <div className='spacing'>C++</div>
                 <div className='spacing'>Php</div>
+                <div className='spacing'>Html</div>
+                <div className='spacing'>Css</div>
             </section>
             <section>
-                <div className='level spacing level-specil'></div>
-                <div className='level spacing level-specil'></div>
-                <div className='level spacing level-specil'></div>
-                <div className='level spacing level-specil'></div>
+                <LevelBar percentage={100}/>
+                <LevelBar percentage={20}/>
+                <LevelBar percentage={60}/>
+                <LevelBar percentage={40}/>
+                <LevelBar percentage={80}/>
+                <LevelBar percentage={80}/>
             </section>
+        </div>
+    )
+}
+
+function LevelBar({percentage}){
+    return(
+        <div className='level spacing level-specil'>
+            <div className='level-inside level-specil-inside' style={{width: percentage+"%"}}/>
+            <div className='level-segment' style={{width:"80%"}}>
+                <div className='level-segment no-height' style={{width:"75%"}}>
+                    <div className='level-segment no-height' style={{width:"66%"}}>
+                        <div className='level-segment no-height' style={{width:"50%"}}>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

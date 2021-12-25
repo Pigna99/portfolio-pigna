@@ -438,11 +438,12 @@ code {
   .level{
     margin-left: 10px;
   }
-  .level-specil{
-    width: 120px!important;
-  }
   .spacing{
     font-size: 16px;
+  }
+
+  .skills-title{
+    margin-left: 20px!important;
   }
 }
 
@@ -504,7 +505,6 @@ code {
 }
 
 .skills-text{
-  padding-bottom: 10px;
   width: 100%;
 }
 
@@ -534,6 +534,7 @@ code {
 
 .spacing{
   margin-top:18px;
+  margin-bottom:18px;
   margin-left: 10px;
   text-align: right;
   height:20px;
@@ -545,6 +546,45 @@ code {
   margin-bottom: 28px;
   margin-right: 10px;
   width: 300px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .spacing{
+    margin-top:8px;
+    margin-bottom:17px;
+  }
+  .level-specil{
+    width: 150px;
+    height: 5px;
+    margin-top: 14px;
+    margin-bottom:32px;
+  }
+  .level-specil-inside{
+    height: 5px;
+  }
+
+  .level-segment{
+    height: 5px!important;
+    bottom: 5px!important;
+  }
+  
+}
+
+@media only screen and (max-width: 550px) {
+  .level-specil{
+    width: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .level-specil{
+    width: 50px;
+  }
+
+  .spacing{
+    margin-left: 0;
+  }
 }
 
 .setting{
@@ -567,4 +607,17 @@ code {
 
 .disabled{
   color: gray!important;
+}
+
+
+.level-segment{
+  display: flex;
+  position: relative;
+  bottom:10px;
+  height: 10px;
+  border-right: 2px solid black;
+}
+
+.no-height{
+  bottom:0px!important;
 }
