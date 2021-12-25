@@ -11,7 +11,7 @@ const AppContext = React.createContext();
 
 //search if SETTINGS are present
 let settings = {
-    music:true,
+    music:'true',
 }
 if(localStorage.length>0){//if something is saved
     settings.music = localStorage.music;
