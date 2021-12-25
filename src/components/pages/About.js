@@ -5,7 +5,6 @@ import {useGlobalContext} from './../../context'
 
 
 
-
 function About() {
     return (
         <div>

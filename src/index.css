@@ -229,6 +229,8 @@ code {
   top: 27px;
   display: none;
   transition: all 0.3s;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .grey{
@@ -246,7 +248,7 @@ code {
     height: auto;
     transition: all 0.3s;
     right: 10px;
-    top:42px;
+    top:50px;
   }
 
   .menu{
@@ -542,4 +544,26 @@ code {
   margin-bottom: 28px;
   margin-right: 10px;
   width: 300px;
+}
+
+.setting{
+  font-size: 30px;
+  cursor: pointer;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.setting-margin{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.setting-column{
+  width: 60%;
+}
+
+.disabled{
+  color: gray!important;
 }
