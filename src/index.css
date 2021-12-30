@@ -446,7 +446,7 @@ code {
     margin-left: 10px;
   }
   .spacing{
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .skills-title{
@@ -592,7 +592,7 @@ code {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 360px) {
   .level-specil{
     width: 50px;
     
