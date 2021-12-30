@@ -42,7 +42,7 @@ function Info() {
     )
 }
 
-function Skills(){//da generare con un array sarebbe meglio!
+function Skills(){//generated through the object "skills" taken from utils
     const {changeCursor} = useGlobalContext();
     const [info, setInfo] = useState('none');
     function changeInfo(id){
@@ -63,7 +63,7 @@ function Skills(){//da generare con un array sarebbe meglio!
                     info === 'none' ? <p className='wrapper'>Select a skill tree!</p>
                     : skills.map((el)=>{
                         if(info === el.type){
-                            return (<SkillLevels skillset={el} />)
+                            return (<SkillLevels skillset={el} key={"skills"+el.type}/>)
                         }
                     })
                 }
