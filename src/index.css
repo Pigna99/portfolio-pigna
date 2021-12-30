@@ -528,7 +528,6 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: left;
-  padding:5px;
   flex-wrap: wrap;
 }
 
@@ -548,16 +547,21 @@ code {
   width: 300px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 950px) {
   .spacing{
-    margin-top:8px;
+    margin-top:10px;
     margin-bottom:17px;
   }
   .level-specil{
     width: 150px;
     height: 5px;
-    margin-top: 14px;
+    margin-top: 16px;
     margin-bottom:32px;
+    box-shadow: 
+    0 0 1px 1px black,
+    0 0 0px 2px white,
+    0 0 1px 3px white,
+    0 0 1px 4px black;
   }
   .level-specil-inside{
     height: 5px;
@@ -573,13 +577,18 @@ code {
 @media only screen and (max-width: 550px) {
   .level-specil{
     width: 80px;
+    box-shadow: 
+    0 0 1px 1px black,
+    0 0 0px 2px white,
+    0 0 1px 3px white,
+    0 0 1px 4px black;
   }
-
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 320px) {
   .level-specil{
     width: 50px;
+    
   }
 
   .spacing{
