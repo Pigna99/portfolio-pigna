@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import immagine from './../../photos/pigna.JPG'
-import {getLevel} from './../../utils'
+import {getLevel, skills} from './../../utils'
 import {useGlobalContext} from './../../context'
 
 
@@ -10,7 +10,6 @@ function About() {
         <div>
             <Stats/>
             <Info/>
-            
         </div>
     )
 }
@@ -33,9 +32,9 @@ function Info() {
             </div>
             <div className='box content-box'>
                 {
-                    info == 'none' ? <None/>
-                    : info== 'menu-info' ? <Infobox/>
-                    : info== 'menu-skills' ? <Skills/>
+                    info === 'none' ? <None/>
+                    : info === 'menu-info' ? <Infobox/>
+                    : info === 'menu-skills' ? <Skills/>
                     : <div>education</div>
                 }
             </div>
@@ -53,42 +52,46 @@ function Skills(){//da generare con un array sarebbe meglio!
     return (
         <div className='info-skills'>
             <nav className='box skills-menu'>
-                <InfoMenuSkill id="programming" text="Programming" functiontoggle={changeInfo}/>
-                <InfoMenuSkill id="skill2" text="skill2" functiontoggle={changeInfo}/>
-                <InfoMenuSkill id="skill3" text="skill3" functiontoggle={changeInfo}/>
+                {
+                    skills.map((el)=>{
+                        return(<InfoMenuSkill id={el.type} text={el.type} key={el.type} functiontoggle={changeInfo}/>)
+                    })
+                }
             </nav>
             <section className='skills-text'>
-            {
-                    info == 'none' ? <p>none</p>
-                    : info== 'programming' ? <ProgrammingLang/>
-                    : info== 'skill2' ? <p>skill2 text</p>
-                    : info== 'skill3' ? <p>skill3 text</p>
-                    : <p>error</p>
+                {
+                    info === 'none' ? <p className='wrapper'>Select a skill tree!</p>
+                    : skills.map((el)=>{
+                        if(info === el.type){
+                            return (<SkillLevels skillset={el} />)
+                        }
+                    })
                 }
             </section>
         </div>
     )
 }
 
-function ProgrammingLang(){
+
+function SkillLevels({skillset}){
     return(
+        <div className='wrapper'>
         <div className='line'>
-            <section>
-                <div className='spacing'>Javascript</div>
-                <div className='spacing'>Python</div>
-                <div className='spacing'>C++</div>
-                <div className='spacing'>Php</div>
-                <div className='spacing'>Html</div>
-                <div className='spacing'>Css</div>
+            <section className='flex-center'>
+                {
+                    skillset.stats.map((el)=>{
+                        return(<div className='spacing' key={el.name}>{el.name}</div>)
+                    })
+                }
             </section>
-            <section>
-                <LevelBar percentage={100}/>
-                <LevelBar percentage={20}/>
-                <LevelBar percentage={60}/>
-                <LevelBar percentage={40}/>
-                <LevelBar percentage={80}/>
-                <LevelBar percentage={80}/>
+            <section className='flex-center'>
+                {
+                    skillset.stats.map((el)=>{
+                        return(<LevelBar percentage={el.level} key={el.name+el.level}/>)
+                    })
+                }
             </section>
+        </div>
         </div>
     )
 }
